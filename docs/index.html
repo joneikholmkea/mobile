@@ -2,249 +2,183 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mobile App Categories Overview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>App Categories Slides</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-    }
     .slide {
-      min-height: 100vh;
-      scroll-snap-align: start;
-      padding: 4rem 1.5rem;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .slide.active {
+      display: block;
+      opacity: 1;
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-gray-100 text-gray-900 font-sans flex flex-col min-h-screen">
 
-  <!-- Slide 1: Title -->
-  <section class="slide bg-blue-100 flex flex-col justify-center items-center text-center">
-    <h1 class="text-4xl font-bold mb-4">Systematic Overview of Mobile App Categories</h1>
-    <p class="text-xl text-gray-700">A 16-slide breakdown with course relevance & project ideas</p>
-  </section>
+  <div id="slides-container" class="flex-1">
+    
+<div class="slide active p-10" id="slide-1">
+  <h2 class="text-3xl font-bold mb-4">Overview: Mobile App Categories</h2>
+  <ul class="list-disc ml-6 space-y-2"><li><a href="#" onclick="goToSlide(2)" class="text-blue-600 hover:underline">1. Personal Productivity &amp; Utilities</a></li><li><a href="#" onclick="goToSlide(3)" class="text-blue-600 hover:underline">2. Communication &amp; Social Networking</a></li><li><a href="#" onclick="goToSlide(4)" class="text-blue-600 hover:underline">3. Entertainment &amp; Media</a></li><li><a href="#" onclick="goToSlide(5)" class="text-blue-600 hover:underline">4. Education &amp; Learning</a></li><li><a href="#" onclick="goToSlide(6)" class="text-blue-600 hover:underline">5. Health &amp; Fitness</a></li><li><a href="#" onclick="goToSlide(7)" class="text-blue-600 hover:underline">6. Lifestyle &amp; Personalization</a></li><li><a href="#" onclick="goToSlide(8)" class="text-blue-600 hover:underline">7. Travel &amp; Navigation</a></li><li><a href="#" onclick="goToSlide(9)" class="text-blue-600 hover:underline">8. Finance &amp; Money Management</a></li><li><a href="#" onclick="goToSlide(10)" class="text-blue-600 hover:underline">9. Shopping &amp; E-Commerce</a></li><li><a href="#" onclick="goToSlide(11)" class="text-blue-600 hover:underline">10. Business &amp; Professional Tools</a></li><li><a href="#" onclick="goToSlide(12)" class="text-blue-600 hover:underline">11. News &amp; Information</a></li><li><a href="#" onclick="goToSlide(13)" class="text-blue-600 hover:underline">12. Augmented &amp; Virtual Reality</a></li><li><a href="#" onclick="goToSlide(14)" class="text-blue-600 hover:underline">13. Kids &amp; Family</a></li><li><a href="#" onclick="goToSlide(15)" class="text-blue-600 hover:underline">14. Food &amp; Drink</a></li><li><a href="#" onclick="goToSlide(16)" class="text-blue-600 hover:underline">15. Government &amp; Civic</a></li></ul>
+</div>
 
-  <!-- Slide 2: Personal Productivity -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">1. Personal Productivity & Utilities</h2>
-    <p class="mb-2">Enhance individual efficiency, organization, or device functionality.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Task Management: Todoist, Trello</li>
-      <li>Note-Taking: Evernote, Notion</li>
-      <li>Calendar: Google Calendar, Fantastical</li>
-      <li>File Management: Dropbox, Google Drive</li>
-      <li>Utilities: 1Password, NordVPN</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Journal or task tracker using Firebase + LocalStorage</p>
-  </section>
+    <div class="slide p-10" id="slide-2">
+      <h2 class="text-3xl font-semibold mb-2">1. Personal Productivity &amp; Utilities</h2>
+      <p class="mb-2">Enhance individual efficiency, organization, or device functionality.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Task Management: Todoist, Trello</li><li>Note-Taking: Evernote, Notion</li><li>Calendar: Google Calendar, Fantastical</li><li>File Management: Dropbox, Google Drive</li><li>Utilities: 1Password, NordVPN</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Journal or task tracker using Firebase + LocalStorage</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-3">
+      <h2 class="text-3xl font-semibold mb-2">2. Communication &amp; Social Networking</h2>
+      <p class="mb-2">Connecting people through messaging, calls, or social platforms.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Messaging: WhatsApp, Telegram</li><li>Social Media: Instagram, LinkedIn</li><li>Video Conferencing: Zoom, Teams</li><li>Dating: Tinder, Bumble</li><li>Community: Discord, Reddit</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Geo-Story for real-time, map-based sharing</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-4">
+      <h2 class="text-3xl font-semibold mb-2">3. Entertainment &amp; Media</h2>
+      <p class="mb-2">Audiovisual content and interactive experiences.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Streaming: Netflix, Spotify</li><li>Gaming: Among Us, Candy Crush</li><li>Reading: Kindle, Audible</li><li>Editing: Canva, Adobe Premiere Rush</li><li>Live Events: Twitch, YouTube Live</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Mini Arcade or Fitness Quest using GameEngine</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-5">
+      <h2 class="text-3xl font-semibold mb-2">4. Education &amp; Learning</h2>
+      <p class="mb-2">Support for skill development and training.</p>
+      <ul class="list-disc ml-6 mb-4"><li>E-Learning: Coursera, Duolingo</li><li>Reference: Wikipedia, Merriam-Webster</li><li>Tutoring: Khan Academy, Chegg</li><li>Language: Babbel, Rosetta Stone</li><li>Kids: ABCmouse, Toca Boca</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Snap &amp; Solve with Camera + APIs</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-6">
+      <h2 class="text-3xl font-semibold mb-2">5. Health &amp; Fitness</h2>
+      <p class="mb-2">Promoting physical or mental well-being.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Fitness: Fitbit, Strava</li><li>Mental Health: Calm, Headspace</li><li>Nutrition: MyFitnessPal, Lifesum</li><li>Medical: WebMD, Ada</li><li>Sleep: Sleep Cycle, Relax Melodies</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Fitness Quest and MoodSpace</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-7">
+      <h2 class="text-3xl font-semibold mb-2">6. Lifestyle &amp; Personalization</h2>
+      <p class="mb-2">Enhance life or reflect personal expression.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Home: Houzz, Google Home</li><li>Fashion: ASOS, Sephora</li><li>Hobbies: Pinterest, PlantSnap</li><li>Personalization: Zedge, Nova Launcher</li><li>Events: Eventbrite, Paperless Post</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: MoodSpace for emotional well-being</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-8">
+      <h2 class="text-3xl font-semibold mb-2">7. Travel &amp; Navigation</h2>
+      <p class="mb-2">Exploration and location-based tools.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Navigation: Google Maps, Waze</li><li>Planning: Tripadvisor, Expedia</li><li>Local Guides: Yelp, Foursquare</li><li>Transport: Uber, Citymapper</li><li>Translation: Google Translate, iTranslate</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Geo-Story, Local Treasure using GPS/Maps</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-9">
+      <h2 class="text-3xl font-semibold mb-2">8. Finance &amp; Money Management</h2>
+      <p class="mb-2">Managing personal or business finances.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Banking: Revolut, Chase</li><li>Budgeting: YNAB, Mint</li><li>Investing: Coinbase, Robinhood</li><li>Payments: PayPal, Venmo</li><li>Accounting: TurboTax, QuickBooks</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Budgeting app possible with Firebase</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-10">
+      <h2 class="text-3xl font-semibold mb-2">9. Shopping &amp; E-Commerce</h2>
+      <p class="mb-2">Buying, selling, and discovering products.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Retail: Amazon, eBay</li><li>Fashion: Zara, Depop</li><li>Grocery: Instacart, Shipt</li><li>Deals: Honey, Rakuten</li><li>Secondhand: Poshmark, Mercari</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Local market app with GPS/Images possible</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-11">
+      <h2 class="text-3xl font-semibold mb-2">10. Business &amp; Professional Tools</h2>
+      <p class="mb-2">Support for professional workflows.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Collaboration: Slack, Asana</li><li>CRM: Salesforce, HubSpot</li><li>HR: LinkedIn, Gusto</li><li>Analytics: Tableau, Google Analytics</li><li>Industry Tools: Epic, Square</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Team task app possible but not primary focus</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-12">
+      <h2 class="text-3xl font-semibold mb-2">11. News &amp; Information</h2>
+      <p class="mb-2">Current events and niche content.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Aggregators: Flipboard, Google News</li><li>Magazines: NYT, The Economist</li><li>Weather: AccuWeather, Dark Sky</li><li>Sports: ESPN, Bleacher Report</li><li>Niche: Feedly, Pocket</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Local news app with GPS + Firebase possible</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-13">
+      <h2 class="text-3xl font-semibold mb-2">12. Augmented &amp; Virtual Reality</h2>
+      <p class="mb-2">Immersive interaction and visualization.</p>
+      <ul class="list-disc ml-6 mb-4"><li>AR Games: Pokémon GO, Wizards Unite</li><li>AR Utilities: IKEA Place, Google Lens</li><li>VR Experiences: Oculus, VRChat</li><li>Training: Simulations for health, mechanics</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Local Treasure with basic AR features</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-14">
+      <h2 class="text-3xl font-semibold mb-2">13. Kids &amp; Family</h2>
+      <p class="mb-2">Apps for young users and families.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Learning Games: PBS Kids, Duplo World</li><li>Storytelling: Storyboard, Epic!</li><li>Parental Tools: Family Link, Cozi</li><li>Creativity: Kids Paint, Toca Lab</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Adapt Local Treasure for scavenger hunt</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-15">
+      <h2 class="text-3xl font-semibold mb-2">14. Food &amp; Drink</h2>
+      <p class="mb-2">Dining, cooking, and food services.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Recipes: Tasty, Yummly</li><li>Delivery: Uber Eats, DoorDash</li><li>Meal Planning: Paprika, Mealime</li><li>Reviews: Zomato, OpenTable</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Recipe app using Camera + Firebase possible</p>
+    </div>
+    
+    <div class="slide p-10" id="slide-16">
+      <h2 class="text-3xl font-semibold mb-2">15. Government &amp; Civic</h2>
+      <p class="mb-2">Public services and civic engagement.</p>
+      <ul class="list-disc ml-6 mb-4"><li>Services: DMV, IRS2Go</li><li>Voting: BallotReady, Vote.org</li><li>Community: Nextdoor, SeeClickFix</li><li>Emergency: FEMA, Red Cross</li></ul>
+      <p class="italic text-sm text-blue-800">Relevance: Local issue-reporting with GPS/Images</p>
+    </div>
+    
+<div class="slide p-10" id="slide-17">
+  <h2 class="text-3xl font-semibold mb-4">Observations &amp; Notes</h2>
+  <ul class="list-disc ml-6 space-y-2 text-gray-700"><li>Overlap: Apps may span multiple categories. Choose a focus.</li><li>Emerging Trends: Growth in AR/VR, mental health, and civic apps.</li><li>Course Fit: Projects align with Health, EdTech, Entertainment, Travel, AR.</li><li>Market: Gaming, Social, Productivity dominate stores.</li><li>Scope: MVPs in Productivity or Education suit short sprints.</li></ul>
+</div>
 
-  <!-- Slide 3: Communication -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">2. Communication & Social Networking</h2>
-    <p class="mb-2">Connecting people through messaging, calls, or social platforms.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Messaging: WhatsApp, Telegram</li>
-      <li>Social Media: Instagram, LinkedIn</li>
-      <li>Video Conferencing: Zoom, Teams</li>
-      <li>Dating: Tinder, Bumble</li>
-      <li>Community: Discord, Reddit</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Geo-Story for real-time, map-based sharing</p>
-  </section>
+  </div>
 
-  <!-- Slide 4: Entertainment -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">3. Entertainment & Media</h2>
-    <p class="mb-2">Audiovisual content and interactive experiences.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Streaming: Netflix, Spotify</li>
-      <li>Gaming: Among Us, Candy Crush</li>
-      <li>Reading: Kindle, Audible</li>
-      <li>Editing: Canva, Adobe Premiere Rush</li>
-      <li>Live Events: Twitch, YouTube Live</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Mini Arcade or Fitness Quest using GameEngine</p>
-  </section>
+  <div class="flex justify-between p-6 bg-white shadow-md sticky bottom-0">
+    <button onclick="prevSlide()" class="bg-gray-200 hover:bg-gray-300 px-6 py-2 rounded text-sm font-medium">Previous</button>
+    <button onclick="nextSlide()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded text-sm font-medium">Next</button>
+  </div>
 
-  <!-- Slide 5: Education -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">4. Education & Learning</h2>
-    <p class="mb-2">Support for skill development and training.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>E-Learning: Coursera, Duolingo</li>
-      <li>Reference: Wikipedia, Merriam-Webster</li>
-      <li>Tutoring: Khan Academy, Chegg</li>
-      <li>Language: Babbel, Rosetta Stone</li>
-      <li>Kids: ABCmouse, Toca Boca</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Snap & Solve with Camera + APIs</p>
-  </section>
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 17;
 
-  <!-- Slide 6: Health -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">5. Health & Fitness</h2>
-    <p class="mb-2">Promoting physical or mental well-being.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Fitness: Fitbit, Strava</li>
-      <li>Mental Health: Calm, Headspace</li>
-      <li>Nutrition: MyFitnessPal, Lifesum</li>
-      <li>Medical: WebMD, Ada</li>
-      <li>Sleep: Sleep Cycle, Relax Melodies</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Fitness Quest and MoodSpace</p>
-  </section>
+    function showSlide(slideNum) {
+      for (let i = 1; i <= totalSlides; i++) {
+        const slide = document.getElementById(`slide-${i}`);
+        if (slide) {
+          slide.classList.remove('active');
+        }
+      }
+      const newSlide = document.getElementById(`slide-${slideNum}`);
+      if (newSlide) {
+        newSlide.classList.add('active');
+      }
+    }
 
-  <!-- Slide 7: Lifestyle -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">6. Lifestyle & Personalization</h2>
-    <p class="mb-2">Enhance life or reflect personal expression.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Home: Houzz, Google Home</li>
-      <li>Fashion: ASOS, Sephora</li>
-      <li>Hobbies: Pinterest, PlantSnap</li>
-      <li>Personalization: Zedge, Nova Launcher</li>
-      <li>Events: Eventbrite, Paperless Post</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: MoodSpace for emotional well-being</p>
-  </section>
+    function nextSlide() {
+      if (currentSlide < totalSlides) {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+    }
 
-  <!-- Slide 8: Travel -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">7. Travel & Navigation</h2>
-    <p class="mb-2">Exploration and location-based tools.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Navigation: Google Maps, Waze</li>
-      <li>Planning: Tripadvisor, Expedia</li>
-      <li>Local Guides: Yelp, Foursquare</li>
-      <li>Transport: Uber, Citymapper</li>
-      <li>Translation: Google Translate, iTranslate</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Geo-Story, Local Treasure using GPS/Maps</p>
-  </section>
+    function prevSlide() {
+      if (currentSlide > 1) {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    }
 
-  <!-- Slide 9: Finance -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">8. Finance & Money Management</h2>
-    <p class="mb-2">Managing personal or business finances.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Banking: Revolut, Chase</li>
-      <li>Budgeting: YNAB, Mint</li>
-      <li>Investing: Coinbase, Robinhood</li>
-      <li>Payments: PayPal, Venmo</li>
-      <li>Accounting: TurboTax, QuickBooks</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Budgeting app possible with Firebase</p>
-  </section>
-
-  <!-- Slide 10: Shopping -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">9. Shopping & E-Commerce</h2>
-    <p class="mb-2">Buying, selling, and discovering products.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Retail: Amazon, eBay</li>
-      <li>Fashion: Zara, Depop</li>
-      <li>Grocery: Instacart, Shipt</li>
-      <li>Deals: Honey, Rakuten</li>
-      <li>Secondhand: Poshmark, Mercari</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Local market app with GPS/Images possible</p>
-  </section>
-
-  <!-- Slide 11: Business -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">10. Business & Professional Tools</h2>
-    <p class="mb-2">Support for professional workflows.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Collaboration: Slack, Asana</li>
-      <li>CRM: Salesforce, HubSpot</li>
-      <li>HR: LinkedIn, Gusto</li>
-      <li>Analytics: Tableau, Google Analytics</li>
-      <li>Industry Tools: Epic, Square</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Team task app possible but not primary focus</p>
-  </section>
-
-  <!-- Slide 12: News -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">11. News & Information</h2>
-    <p class="mb-2">Current events and niche content.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Aggregators: Flipboard, Google News</li>
-      <li>Magazines: NYT, The Economist</li>
-      <li>Weather: AccuWeather, Dark Sky</li>
-      <li>Sports: ESPN, Bleacher Report</li>
-      <li>Niche: Feedly, Pocket</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Local news app with GPS + Firebase possible</p>
-  </section>
-
-  <!-- Slide 13: AR/VR -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">12. Augmented & Virtual Reality</h2>
-    <p class="mb-2">Immersive interaction and visualization.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>AR Games: Pokémon GO, Wizards Unite</li>
-      <li>AR Utilities: IKEA Place, Google Lens</li>
-      <li>VR Experiences: Oculus, VRChat</li>
-      <li>Training: Simulations for health, mechanics</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Local Treasure with basic AR features</p>
-  </section>
-
-  <!-- Slide 14: Kids & Family -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">13. Kids & Family</h2>
-    <p class="mb-2">Apps for young users and families.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Learning Games: PBS Kids, Duplo World</li>
-      <li>Storytelling: Storyboard, Epic!</li>
-      <li>Parental Tools: Family Link, Cozi</li>
-      <li>Creativity: Kids Paint, Toca Lab</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Adapt Local Treasure for scavenger hunt</p>
-  </section>
-
-  <!-- Slide 15: Food -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">14. Food & Drink</h2>
-    <p class="mb-2">Dining, cooking, and food services.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Recipes: Tasty, Yummly</li>
-      <li>Delivery: Uber Eats, DoorDash</li>
-      <li>Meal Planning: Paprika, Mealime</li>
-      <li>Reviews: Zomato, OpenTable</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Recipe app using Camera + Firebase possible</p>
-  </section>
-
-  <!-- Slide 16: Government -->
-  <section class="slide bg-white">
-    <h2 class="text-3xl font-semibold mb-2">15. Government & Civic</h2>
-    <p class="mb-2">Public services and civic engagement.</p>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Services: DMV, IRS2Go</li>
-      <li>Voting: BallotReady, Vote.org</li>
-      <li>Community: Nextdoor, SeeClickFix</li>
-      <li>Emergency: FEMA, Red Cross</li>
-    </ul>
-    <p class="italic text-sm text-blue-800">Relevance: Local issue-reporting with GPS/Images</p>
-  </section>
-
-  <!-- Slide 17: Observations -->
-  <section class="slide bg-yellow-50">
-    <h2 class="text-3xl font-semibold mb-4">Observations & Notes</h2>
-    <ul class="list-disc ml-6 space-y-2 text-gray-700">
-      <li><strong>Overlap:</strong> Apps may span multiple categories. Choose a focus.</li>
-      <li><strong>Emerging Trends:</strong> Growth in AR/VR, mental health, and civic apps.</li>
-      <li><strong>Course Fit:</strong> Your projects mostly align with Health, EdTech, Entertainment, Travel, AR.</li>
-      <li><strong>Market:</strong> Gaming, Social, Productivity dominate stores.</li>
-      <li><strong>Scope:</strong> Focused MVPs (like Productivity or EdTech) work best for 4-week projects.</li>
-    </ul>
-  </section>
+    function goToSlide(slideNum) {
+      currentSlide = slideNum;
+      showSlide(currentSlide);
+    }
+  </script>
 
 </body>
 </html>
